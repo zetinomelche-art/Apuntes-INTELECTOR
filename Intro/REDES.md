@@ -186,7 +186,7 @@ Conocidos
 HTTP 80
 HTTPs 443
 FTP 20 , 21
-Telnet 21
+Telnet 23
 
 Regsitrados
 1024 - 49151 
@@ -284,8 +284,8 @@ Broadcast IP Addresss
 #
 No se puede elejir una mascara de sub red arbitrariament, siempre hay verificar que no exista una superposicion
 
-VLSM (Varible Lengtj Subnet Masking)
-
+VLSM (Varible Length Subnet Masking)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~````
 
 # IPv6
 Nibble -> 4 bits
@@ -488,3 +488,152 @@ A menudo cuando hablamos de estos 2 terminos se refiere a una WAN donde se tiene
 
 ## PAN (Persnoal Area Network)
 para conectar dispositivos a tu alrededor, por ejemplo, cuando te conectas a un smartwath
+
+
+# WAN Tecnologies 
+
+## Leased Line
+- Copper (T1)
+Se fue de las primeras y se usabara para pasar seniales de lineas analogicas a digitales, para que rocrrieran gran distancia sin perder calidad, no se usa tanto como antes
+
+## Fibra Optica
+Con capacidad de hasta 40Gbps, por lo que es una conexion de alta velocidad
+
+-Dark Fiber
+Se instala fibra optica en el suelo y esa fibra es oscura. Ademas que los clientes deben agregar sus propios laseres a esa fibra
+
+-Metro Ethernet
+Se utlizara la fibra para comunicacion paro el proveedor de internet ya tendra los laseres en la fibra, y proporcionara cierta infraestructura para que se conecte a la red.
+Es posible controlar el hancho de banda
+
+Multiprotocol Label Switching (Conmutación de etiquetas multiprotocolo), usaremos en la red de nuestro proveedor para que la red sea, segura, eficiente y confiable. 
+
+Lo usariamo si tenemos 2 edificos demasiado lejos para conectarlos por cables de cobre
+
+Software define WAN (SDWAN)
+
+## Internet
+- Satelite 
+- Fibra  optica
+- Calbe
+
+
+## Conceptos
+
+### T1 Link
+-Bell Labs
+-Hasta 1.544 Mbps
+
+### T3
+- hasta 44.736 Mbps
+
+### ISDN
+
+Primary Rate Interface (PRI)
+
+# Virtualizaed NEtworks
+Ha sucedido en datacenter desde el 2007. Antes de eso se utilizaba un servidor para un servidor especifico para cada tarea o incluso varias, por que mientras las tareas crecian la contidad de servidores apra ejecutarlsa tambien, por lo que en algun momento dejaria de ser escalable. Ademas que al hacer calculos se determini que solo se usaba solo el 10 a 15 porciento de la potencia de estos servidores.
+
+Cuando se virtualizan servidores, se toma una parte del procesador, memoria, apra ejecutarlo, sin embargo necesitamos una forma de conectar estos dispositivos a la red, es qui donde se ejecuta la res red segura especial llamada VLAN, que es una forma de conectar nuestro servidores virtuales a la infraestructura de red fisica
+
+
+# 3 tier network model (MOdelo de red de 3 niveles )
+Se usa cuando se esta contruyendo redes, para proporcionar una res redundante, de alta velocidad y confiable.
+Como organizamos el harware para mover el trafico
+
+
+## Core
+la clolumna vertebral de nuestra red
+Conectara todos los nodos de la capa de distribucion.
+MOvera rapidamente el trafico de una parte de la cap de distribuxion a otra
+
+## Distribution
+El encargado de conectar nuestro dispositivos de la capa de acceso y comenzar a construir una conexion entre, por ejemlo: las oficinas y centros de datos 
+Se usaran dispositivos como switch, router para tomar los dispositivos de la capa acceso y conectarlo juntos.
+Responsable de distribuir el acceso a la red a la capa de Acces
+Filtrara el trafico
+
+## Access 
+Nuestra caoa de acceso es la manera en la que conectamos los equipos finales a un swtic.
+El proposito es proporciones acceso a la red a los dispositivos
+Controlar el acceso a la red
+Cambios limitados
+
+
+# Redes definidas por software
+
+# Sotrage Area Network Connections (Conexiones de redes de are de almacenamiento)
+
+
+# Software Defined Network (Redes definidas por software)
+Por lo general se usan en datacenters y hay 3 capas
+
+
+## Capa de  Aplicacion 
+en las SDN la capa de aplicacion es donde los administradores pueden crear utilidaes y reglas que parmitan qye la red funcione de manera dinamica
+
+
+POr ejemplo si hay una gran cantida de informacion proveniente de un dispositivo diferente, la cap de aplicaciom  puede tener politicas escritas para que se envien a la capa de conyrol  y esta las aplieu de manera que sea mas eficioente la red, y cunado este evento termine, volver a la configuracion anteriror
+
+
+
+
+## Capa de  Control
+La encargada de muchas de las cosAS QUE giran en torno a mover el trafico, como brindar la ip correcta dispositivos a traves del servicio DHCP.
+Aplicar reglas de control de acceso para limitar a donde va el trafico
+
+
+## Capa de Infraestrucutra
+Consistira en routers, switchs que se diseniaran y conectaran juntos con ciertsas de politicas enrrutamiento.
+Se puede usar esta capa solo para pasar el trafico
+
+Redponsble de movel el trafico a la hubicacion correcta de la manera mas eficioente posible
+
+### Management Plane
+Un nuevo mecanismo de contro y seguimiento de todos los dispositivoa de nuestra red.
+
+POdemos usaer este dispositivo para configurar algo llamado SDN(Red definida por software) o controlador DSN 
+
+controlador DSN alojara toda la configuracion que se alicara, superpuesto al resto de nuestro hardware para falitiar el control y manipulacion de trafico
+
+
+El comtrolador dsn enviara configuraciones adicionales a dispositivos de la capa de infraestructura
+
+
+
+# SAN (Storage Area Network)
+Necesitamos almacenar los datos de los server en algun lugar, es aqui donde entran los SAN
+
+Hay 3 manerad e conectarnos a estos dispositivos
+
+## fibre Channel
+
+## Fibra channel over ethernet
+En lugar de operar unicamente sobre conexiones de fibra optica, puede ejecutar sobre conexiones ethernet de alta velocidad
+
+fibre Channel y Fibra channel over ethernet operan en la capa 2, la capa de enlace
+
+## iSCI
+Otro metodo que podemos ucupar para conectar nuestro SAN a nuestros servidores y usa el TCP/IP 
+
+
+# SAAS PAAS IAAS
+
+## SAAS (Software as a service)
+Paquere offce
+Google Office
+Adobe
+
+Hosted DNS (Alojamiento DNS)
+
+## PAAS (Platform as a service)
+Es donde se ofrece Hardware y software 
+mayormente se usan del lado del servidor
+Database
+
+## IAAS (Ifraestructure as a service)
+Es simplemente donde alquilamos una pieza de harware de servidor, por ejemplo alamcenamiento y es muy escalable.
+Ofrece bastante automatixzacion
+
+
+## (DAAS) Desktop as a service

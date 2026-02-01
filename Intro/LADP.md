@@ -1,5 +1,7 @@
 # LDAP (Lightweight Directory Access Protocol)
 
+El Protocolo ligero de acceso a directorios (LDAP) es un protocolo de aplicación para trabajar con varios servicios de directorio. Servicios de directorio, como Active Directory, almacenar información de usuario y cuenta, e información de seguridad como contraseñas.
+
 ## 1. ¿Qué es LDAP?
 
 LDAP (Lightweight Directory Access Protocol) es un **protocolo de red** que se utiliza para **acceder, consultar y administrar servicios de directorio**. Un servicio de directorio es una base de datos especializada que almacena información estructurada sobre usuarios, equipos, grupos, servicios y otros recursos dentro de una red.
