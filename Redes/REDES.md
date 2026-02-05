@@ -576,8 +576,6 @@ en las SDN la capa de aplicacion es donde los administradores pueden crear utili
 POr ejemplo si hay una gran cantida de informacion proveniente de un dispositivo diferente, la cap de aplicaciom  puede tener politicas escritas para que se envien a la capa de conyrol  y esta las aplieu de manera que sea mas eficioente la red, y cunado este evento termine, volver a la configuracion anteriror
 
 
-
-
 ## Capa de  Control
 La encargada de muchas de las cosAS QUE giran en torno a mover el trafico, como brindar la ip correcta dispositivos a traves del servicio DHCP.
 Aplicar reglas de control de acceso para limitar a donde va el trafico
@@ -595,7 +593,6 @@ Un nuevo mecanismo de contro y seguimiento de todos los dispositivoa de nuestra 
 POdemos usaer este dispositivo para configurar algo llamado SDN(Red definida por software) o controlador DSN 
 
 controlador DSN alojara toda la configuracion que se alicara, superpuesto al resto de nuestro hardware para falitiar el control y manipulacion de trafico
-
 
 El comtrolador dsn enviara configuraciones adicionales a dispositivos de la capa de infraestructura
 
