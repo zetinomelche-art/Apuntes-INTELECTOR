@@ -160,23 +160,15 @@ NO se habla ni se usan mucho a dia de hoy.
 Muchos dispositivos comparten el mismo medio, escuchan antes de hablar y detectan si ocurre una colisión.
 
 
-
-    
-
-
 ### ¿Se usa CSMA/CD hoy en día?
 - Hoy no hablamos ni usamos CSMA/CD en redes Ethernet modernas
 - Es una tecnología arcaica
 
 ### Cómo funcionaba el Ethernet original
 El medio físico
-
 Se usaba un cable coaxial grueso
-
 Un solo cable
-
 Todos los dispositivos conectados al mismo cable
-
 No había switches, ni enlaces dedicados.
 
 
@@ -408,6 +400,10 @@ El encabezado Ethernet contiene tres campos fundamentales:
     Indica quién envió la trama
     También es una dirección de Capa 2
 
+
+los primeros 24 bits son el OUI (Identificador Único Organizacional) que identifica al fabricante
+OUI (Identificador Único Organizacional) que identifica al fabricante, y los últimos 24 bits son el identificador específico del dispositivo (NIC), asignado por la marca para hacer cada interfaz única
+
 3. Campo Tipo (Type)
 
     Indica qué tipo de datos viajan dentro de la trama
@@ -469,6 +465,43 @@ No siempre hay un paquete IP:
 Algunos mensajes son solo de Capa 2 (como ARP)
 
 
+
+### MTU – Maximum Transmission Unit
+¿Qué es la MTU?
+
+Es el tamaño máximo de datos que puede transportar una trama
+
+En Ethernet:
+
+MTU = 1500 bytes
+
+#### Jumbo Frames (Tramas gigantes)
+
+MTU mayor a 1500 bytes
+
+Usadas principalmente en:
+
+- Centros de datos
+
+- Redes de almacenamiento (SAN)
+
+Ventajas:
+
+- Menos tramas
+
+Mayor eficiencia
+
+- Requisito:
+
+Todos los dispositivos deben soportarlas
+
+Si no:
+
+Se descartan
+
+O causan errores
+
+
 ### FCS – Frame Check Sequence
 
 Este es el pie de la trama.
@@ -509,40 +542,6 @@ La recuperación depende de protocolos superiores, como:
 TCP (Capa 4)
 
 
-### MTU – Maximum Transmission Unit
-¿Qué es la MTU?
-
-Es el tamaño máximo de datos que puede transportar una trama
-
-En Ethernet:
-
-MTU = 1500 bytes
-
-#### Jumbo Frames (Tramas gigantes)
-
-MTU mayor a 1500 bytes
-
-Usadas principalmente en:
-
-- Centros de datos
-
-- Redes de almacenamiento (SAN)
-
-Ventajas:
-
-- Menos tramas
-
-Mayor eficiencia
-
-- Requisito:
-
-Todos los dispositivos deben soportarlas
-
-Si no:
-
-Se descartan
-
-O causan errores
 
 ### PDU – Protocol Data Unit
 
