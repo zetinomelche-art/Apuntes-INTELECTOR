@@ -14,6 +14,7 @@ Objetivos del Módulo
     - Demostración de Traceroute - Visualizar enrutadores entre origen y destino
 
 ## Capas OSI Involucradas
+
 El enrutamiento IP utiliza las 3 capas inferiores:
 
 Capa 1 - Física: Medios de transmisión
@@ -35,7 +36,6 @@ Capa 3 - Red: Enrutamiento a través de Internet
 
 ## EJEMPLO DETALLADO: Ruta de Estación de Trabajo a Servidor
 
-
 1. Estación de Trabajo (Cliente)
 
 Dispositivo de origen en la red doméstica
@@ -48,8 +48,8 @@ Se representa con un círculo con flechas
 3. Cable Módem (Puente de Capa 2)
 
 Convierte tramas Ethernet → tramas DOCSIS
-DOCSIS: Protocolo que usan los módems de cable para comunicarse con el ISP
-Proceso: Extrae el paquete IP de la trama Ethernet y lo coloca en una nueva trama DOCSIS
+DOCSIS: Protocolo que usan los módems de cable para comunicarse con el ISP 
+Proceso: Extrae el paquete IP de la trama Ethernet y lo coloca en una nueva trama DOCSIS (Internet Service Provider)
 
 4. Internet (Múltiples Enrutadores)
 
@@ -146,9 +146,9 @@ Trama que necesitamos construir:
 [MAC Destino: ???] [MAC Origen: conocida] [Protocolo: IPv4] [Paquete IP]
 Información que tenemos:
 
-✅ MAC Origen: Dirección MAC de 10.0.0.10 (nuestra estación)
-✅ Protocolo: IPv4
-❌ MAC Destino: ¡NO LA CONOCEMOS!
+MAC Origen: Dirección MAC de 10.0.0.10 (nuestra estación)
+Protocolo: IPv4
+MAC Destino: ¡NO LA CONOCEMOS!
 
 Problema: La estación de trabajo no sabe la dirección MAC de 10.0.0.20
 Solución: Usar ARP (Protocolo de Resolución de Direcciones)
@@ -196,7 +196,7 @@ Completa la trama Ethernet del ping original:
 Trama final del Ping:
 [MAC Destino: MAC de 10.0.0.20] [MAC Origen: MAC de 10.0.0.10] [IPv4] [Paquete IP con ping]
 
-✅ Envía el ping directamente a 10.0.0.20
+Envía el ping directamente a 10.0.0.20
 
 
 Concepto Clave: Caché ARP (Tabla ARP)
@@ -234,7 +234,7 @@ Ubicación: En computadoras, routers (dispositivos Capa 3)
 Mapeo: Dirección IP (Capa 3) → Dirección MAC (Capa 2)
 Ejemplo: "10.0.0.20 → MAC AA:BB:CC:DD:EE:FF"
 
-⚠️ NO son la misma tabla aunque ambas contengan direcciones MAC
+NO son la misma tabla aunque ambas contengan direcciones MAC
 
 ¿Por Qué No Usar Broadcast para Todo?
 Pregunta del ejemplo: "¿Por qué no enviar todo a broadcast?"
