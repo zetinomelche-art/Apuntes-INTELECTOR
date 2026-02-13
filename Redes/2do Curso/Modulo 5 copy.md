@@ -118,6 +118,24 @@ Dirección MAC de origen
 Protocolo de Capa 3: IPv4
 
 
+- ICMP - Protocolo de Mensajes de Control de Internet
+    ¿Qué es?
+    Es el protocolo que usa el comando ping. Vive dentro del paquete IP como los datos que se transportan.
+    ¿Para qué sirve?
+    
+    Verificar si un dispositivo está vivo y respondiendo
+    Diagnosticar problemas de red
+    Reportar errores entre dispositivos
+    
+    ¿Cómo funciona el ping?
+    PC A                          PC B
+      |                             |
+      | --- ICMP Echo Request  --→  |   "¿Estás ahí?"
+      |                             |
+      | ←-- ICMP Echo Reply    ---  |   "¡Sí, aquí estoy!"
+    Tipos de mensajes ICMP comunes:
+    MensajeSignificadoEcho RequestEl ping que envíasEcho ReplyLa respuesta al pingDestination UnreachableNo se pudo llegar al destinoTTL ExceededEl TTL llegó a 0, paquete descartadoTime ExceededLo usa Traceroute
+    
 ## EJEMPLO COMPLETO: Proceso de Ping entre Dispositivos
 
 - FASE 1: Creación del Paquete IP
