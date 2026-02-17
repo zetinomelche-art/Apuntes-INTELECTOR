@@ -500,15 +500,42 @@ Por Algoritmo:
     EIGRP
     Miden "distancia" a la red destino
 
-## Estado de Enlace:
+    Vector de Distancia (Distance Vector)
+    ¿Cómo funciona?
+    Cada router solo sabe cuántos saltos hay hasta llegar a una red, sin importar el camino. Es como preguntarle a tu vecino cómo llegar a un lugar: él te dice la dirección pero no conoce el mapa completo.
+    Analogía: Imagina que preguntas cómo llegar al aeropuerto y te dicen "son 3 calles a la derecha", sin saber si hay tráfico, semáforos o si es la ruta más rápida.
 
+    RIP: Cuenta saltos (hops). Máximo 15 saltos. Si hay 16, considera que el destino es inalcanzable. Muy limitado y lento para actualizarse.
+    EIGRP: Más avanzado, considera no solo saltos sino también ancho de banda y retraso de los enlaces para elegir la mejor ruta.
+
+Desventaja clave: Solo conocen lo que sus vecinos les dicen, no tienen visión completa de la red.
+
+## Estado de Enlace:
     OSPF
     Mantiene mapa completo de la red
     Calcula mejor ruta
 
+    Estado de Enlace (Link State)
+    ¿Cómo funciona?
+    Cada router construye un mapa completo de toda la red. Conoce todos los routers, todos los enlaces y el estado de cada uno. Con ese mapa calcula por sí solo la mejor ruta.
+    Analogía: Es como tener Google Maps. Ves toda la ciudad, sabes qué calles están congestionadas y calculas la ruta óptima tú mismo.
+
+    OSPF: Cada router comparte información sobre sus propios enlaces con todos los demás routers de la red. Todos terminan teniendo el mismo mapa completo. Si un enlace falla, todos se enteran rápidamente y recalculan.
+
+    Ventaja clave: Reacciona mucho más rápido a cambios en la red que los protocolos de vector de distancia.
+
+
+
+
 ## Híbrido:
-    
     BGP
     Usa múltiples parámetros
+
+    Híbrido (Path Vector)
+    ¿Cómo funciona?
+    BGP no encaja bien en las categorías anteriores. No solo mide distancia ni mantiene un mapa, sino que toma decisiones basadas en políticas y contratos comerciales entre organizaciones.
+    Analogía: Es como un acuerdo entre países sobre por dónde puede pasar el tráfico aéreo. No siempre se elige la ruta más corta, sino la que cumple con los acuerdos establecidos.
+
+    BGP: Usado en Internet entre ISPs y grandes empresas. Un ISP puede decir "el tráfico de esta empresa NO puede pasar por la red de tal país" o "prefiero este camino porque tenemos contrato con ese proveedor". Tiene decenas de parámetros configurables.
 
 

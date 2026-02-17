@@ -65,7 +65,7 @@ Características:
 ## Modem DSL (Digital Subscriber Line)
 Línea de Suscriptor Digital
 
-que hace>
+que hace >
 Conversión:
 
 Entrada: Señal DSL (por el cable telefónico)

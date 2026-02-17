@@ -52,3 +52,76 @@ Este coordina, copia y maneja la trancision
 -- Todos los server deben estar en el mismo dominio
 -- En server controladores de dominio no se puede hacer trancision pero si copiar archivos
 
+# Que si conserva
+
+Datos
+
+    - Archivos y carpetas
+    - Estructura completa de directorios
+    - Fechas (creación, modificación, acceso)
+    - Atributos (solo lectura, oculto, etc.)
+
+🔐 Seguridad
+
+    - Permisos NTFS
+    - Propietarios de archivos
+    - Herencia de permisos
+    - Auditoría NTFS
+
+🌐 Comparticiones de red (Shares)
+
+    - Nombres de los shares
+    - Permisos de compartición
+    - Paths originales
+    - Configuración SMB
+
+🧑‍🤝‍🧑 Identidad
+
+    - Funciona con cuentas locales y de dominio
+    - Mantiene SIDs (muy importante)
+
+🧭 Red (opcional en Cutover)
+
+    - IP Address
+    - Nombre del servidor
+    - Pertenece al dominio (si eliges cutover)
+
+🔁 Sincronización
+
+    - Permite varias sincronizaciones antes del corte final
+    - Solo copia cambios (delta)
+
+QUÉ NO CONSERVA (NO migra)
+Aplicaciones
+
+    - Programas instalados
+    - Servicios de terceros
+    - Roles no relacionados con archivos
+
+🚫 Sistema
+
+    - Sistema operativo
+    - Registro completo de Windows
+    - Drivers
+    - Configuraciones personalizadas del SO
+
+🚫 Roles NO compatibles
+
+    - DHCP
+    - DNS
+    - Active Directory
+    - IIS
+    - Print Server (solo archivos, no colas)
+
+🚫 Configuración avanzada SMB
+
+    - SMB Multichannel
+    - SMB Direct (RDMA)
+    - Quotas de FSRM (se recrean manualmente)
+
+🚫 Tareas y scripts
+
+    - Scheduled Tasks
+    - Scripts personalizados
+    - GPO locales
+
